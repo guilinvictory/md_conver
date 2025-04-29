@@ -1,0 +1,18 @@
+identity:
+  author: fxy
+  name: md_convert_tools
+  label:
+    en_US: md_convert
+    zh_Hans: md_convert
+    pt_BR: md_convert
+  description:
+    en_US: markdown convert tools
+    zh_Hans: markdown convert tools
+    pt_BR: markdown convert tools
+  icon: icon.svg
+tools:
+  - tools/md_to_docx/md_to_docx.yaml
+  - tools/md_to_pdf/md_to_pdf.yaml
+extra:
+  python:
+    source: provider/md_convert.py

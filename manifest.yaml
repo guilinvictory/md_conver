@@ -1,0 +1,43 @@
+version: 0.0.2
+type: plugin
+author: fxy
+name: md_convert_tools
+label:
+  en_US: md_convert
+  ja_JP: md_convert
+  zh_Hans: md_convert
+  pt_BR: md_convert
+description:
+  en_US: markdown convert tools
+  ja_JP: markdown convert tools
+  zh_Hans: markdown convert tools
+  pt_BR: markdown convert tools
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    endpoint:
+      enabled: true
+    app:
+      enabled: true
+    storage:
+      enabled: true
+      size: 1048576
+plugins:
+  tools:
+    - provider/md_convert.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: 1.0.0
+created_at: 2025-04-29T09:44:13.5189316+08:00
+privacy: PRIVACY.md
+verified: false

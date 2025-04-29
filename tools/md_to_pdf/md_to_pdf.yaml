@@ -1,0 +1,25 @@
+identity:
+  name: md_to_pdf
+  author: fxy
+  label:
+    en_US: Markdown to PDF file
+    zh_Hans: Markdown 转 PDF 文件
+description:
+  human:
+    en_US:  A tool for generating PDF file from Markdown text
+    zh_Hans: 一个用于将Markdown转换为PDF文件的工具
+  llm: A tool for generating PDF file from Markdown text
+parameters:
+  - name: answer
+    type: string
+    required: true
+    label:
+      en_US: Markdown text
+      zh_Hans: Markdown格式文本
+    human_description:
+      en_US: Markdown text
+      zh_Hans: Markdown格式文本
+    form: llm
+extra:
+  python:
+    source: tools/md_to_pdf/md_to_pdf.py
