@@ -18,7 +18,7 @@ class MarkdownToPDFTool(Tool):
         try:
             html_str = self._convert_to_html(answer)
             result_file_bytes = pisa.CreatePDF(
-                src=html_str,
+                src=html_str.encode("utf-8"),
                 dest_bytes=True,
                 encoding="utf-8",
             )
