@@ -12,7 +12,7 @@ identity:
   icon: icon.svg
 tools:
   - tools/md_to_docx/md_to_docx.yaml
-  - tools/md_to_pdf/md_to_pdf.yaml
+#  - tools/md_to_pdf/md_to_pdf.yaml
 extra:
   python:
     source: provider/md_convert.py

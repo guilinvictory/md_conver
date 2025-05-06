@@ -25,3 +25,35 @@ class MimeType(StrEnum):
     XML = "text/xml"
     YAML = "text/yaml"
     ZIP = "application/zip"
+
+    @classmethod
+    def get_extension(cls, mime_type: str) -> str:
+        """
+        Get file extension by mime type
+        :return: file extension with "." as prefix, e.g. ".txt"
+        """
+        mime_type_map = {
+            cls.CSS: ".css",
+            cls.CSV: ".csv",
+            cls.DOCX: ".docx",
+            cls.HTML: ".html",
+            cls.JS: ".js",
+            cls.JAVA: ".java",
+            cls.JSON: ".json",
+            cls.LATEX: ".tex",
+            cls.MD: ".md",
+            cls.PDF: ".pdf",
+            cls.PHP: ".php",
+            cls.PNG: ".png",
+            cls.PPTX: ".pptx",
+            cls.PY: ".py",
+            cls.RST: ".rst",
+            cls.RUBY: ".rb",
+            cls.TXT: ".txt",
+            cls.SH: ".sh",
+            cls.SVG: ".svg",
+            cls.XLSX: ".xlsx",
+            cls.XML: ".xml",
+            cls.YAML: ".yaml",
+        }
+        return mime_type_map.get(mime_type, ".bin")

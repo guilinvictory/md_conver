@@ -2,8 +2,8 @@ identity:
   name: md_to_docx
   author: fxy
   label:
-    en_US: Markdown to Docx file
-    zh_Hans: Markdown 转 Docx 文件
+    en_US: Markdown to  file
+    zh_Hans: Markdown 转  文件
 description:
   human:
     en_US:  A tool for generating DOCX file from Markdown text
@@ -20,6 +20,16 @@ parameters:
       en_US: Markdown text
       zh_Hans: Markdown格式文本
     form: llm
+  - name: type
+    type: string
+    required: true
+    label:
+      en_US: generate type
+      zh_Hans: 生成类型
+    human_description:
+      en_US: generate type
+      zh_Hans: 生成类型
+    form: form
 extra:
   python:
     source: tools/md_to_docx/md_to_docx.py
